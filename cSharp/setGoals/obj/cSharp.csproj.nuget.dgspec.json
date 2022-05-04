@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\davon\\OneDrive\\Documents\\CodeAcademy\\cSharp\\setGoals\\cSharp.csproj": {}
+    "c:\\Users\\davon\\OneDrive\\Documents\\CodeAcademy\\cSharp\\setGoals\\cSharp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\davon\\OneDrive\\Documents\\CodeAcademy\\cSharp\\setGoals\\cSharp.csproj": {
+    "c:\\Users\\davon\\OneDrive\\Documents\\CodeAcademy\\cSharp\\setGoals\\cSharp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\davon\\OneDrive\\Documents\\CodeAcademy\\cSharp\\setGoals\\cSharp.csproj",
+        "projectUniqueName": "c:\\Users\\davon\\OneDrive\\Documents\\CodeAcademy\\cSharp\\setGoals\\cSharp.csproj",
         "projectName": "cSharp",
-        "projectPath": "C:\\Users\\davon\\OneDrive\\Documents\\CodeAcademy\\cSharp\\setGoals\\cSharp.csproj",
+        "projectPath": "c:\\Users\\davon\\OneDrive\\Documents\\CodeAcademy\\cSharp\\setGoals\\cSharp.csproj",
         "packagesPath": "C:\\Users\\davon\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\davon\\OneDrive\\Documents\\CodeAcademy\\cSharp\\setGoals\\obj\\",
+        "outputPath": "c:\\Users\\davon\\OneDrive\\Documents\\CodeAcademy\\cSharp\\setGoals\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
