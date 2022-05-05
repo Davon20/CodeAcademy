@@ -50,7 +50,7 @@ namespace App
             Console.WriteLine("\nWrite your revised goal as a statement here: ");
             string rGoal = Console.ReadLine();
 
-            Console.WriteLine($"\nYou've reached the end of Goal Setter. Use your revised statement as a tool to accomplish your life changing goals.");
+            Console.WriteLine($"\nYou've reached the end of Goal Setter. Use your revised statement as a tool to accomplish your goal.");
         }
     }
 }
