@@ -1,3 +1,4 @@
+#if statements
 user_name = "Dave"
 if user_name == "Dave":
   print("Get off my computer Dave!")
@@ -6,6 +7,8 @@ if user_name == "angela_catlady_87":
   print("I know it is you, Dave! Go away!")
   
   
+  
+#Comparison if Statements
 x = 20
 y = 20
 credits = 120
@@ -24,7 +27,7 @@ if not (credits >= 120) and not (gpa >= 2.0):
   print("You do not meet either requirement to graduate!")
 else:
     print("You will graduate! ")
-      
+
 statement_one = (2 + 2 + 2 >= 6) and (-1 * -1 < 0)
 statement_two = (4 * 2 <= 8) and (7 - 1 == 6)
 credits = 120
@@ -33,6 +36,8 @@ if credits >= 120 and gpa >= 2.0:
   print("You meet the requirements to graduate!") 
   
   
+  
+#Elif Statements
 grade = 86
 if(grade >= 90):
   print("A")
@@ -45,8 +50,10 @@ elif(grade >= 60):
 else:
   print("F")
 
-import random
 
+
+#8 Ball Game
+import random
 name = "Davon"
 question = "Can I win big gambling in Vegas?"
 answer = ""
@@ -79,7 +86,9 @@ print(name + " asks: " + question)
 print("Magic 8 Ball's answer: " + answer)
 
 
-weight = 8.4
+
+#Shipping Company Delivery Calculations
+weight = 41.5
 #Ground Shipping
 if weight <= 2:
   print(1.50 * weight + 20)
@@ -89,3 +98,17 @@ elif weight > 6 and (weight <= 10):
   print(4 * weight + 20)
 else:
   print(4.75 * weight + 20)
+
+flatCharge = 125
+print("Ground Shipping Premium $", flatCharge)
+
+#Drone Shipping
+weight = 41.5
+if weight <= 2:
+  print(4.50 * weight)
+elif weight >= 2 and (weight <= 6):
+  print(9 * weight)
+elif weight > 6 and (weight <= 10):
+  print(12 * weight)
+else:
+  print(14.25 * weight)
