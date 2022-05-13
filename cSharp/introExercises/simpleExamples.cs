@@ -15,6 +15,9 @@ namespace cSharpFunctionality
             // stringConcat();
             // conditionalLogic();
             //usingSwitch();
+            //mysteryGame();
+            //methodTypes();
+            keyWords();
         }
 
         private static void compOps()
@@ -145,8 +148,8 @@ namespace cSharpFunctionality
 
                 if (doorChoice == "KNOCK")
                 {
-                    Console.WriteLine("A voice behind the door speaks. It says, \"Answer this riddle: \"");
-                    Console.WriteLine("Poor people have it. Rich people need it. If you eat it you die. What is it?");
+                    Console.WriteLine("A voice behind the door speaks. It says, \"Answer this riddle: ");
+                    Console.WriteLine("Poor people have it. Rich people need it. If you eat it you die. What is it?\"");
                     Console.Write("Type your answer: ");
                     string riddleAnswer = Console.ReadLine();
                     riddleAnswer = riddleAnswer.ToUpper();
@@ -193,5 +196,41 @@ namespace cSharpFunctionality
                 }
             }
         }
+        /*private static void methodTypes()
+        {
+            built_in_methods();
+            static void built_in_methods()
+            {
+                string msg = "Yabba dabba doo!";
+                Math.Min(3, 5);//Math.Min() expects 2 #'s as input
+                Console.WriteLine(msg.Substring(2));//Substring takes away the characters of the string
+            }
+
+            usingParameters("Yoda", 900);
+            static void usingParameters(string identity, int age)
+            {
+                Console.WriteLine($"{identity} is {age} years old.");
+            }
+
+            optionalParameters("I'm hungry", "!");
+            static void optionalParameters(string message, string punc)
+            {
+                Console.WriteLine(message + punc);
+            }
+            
+            overLoading("Rosco", "Marshall", "Charlie");
+            static void overLoading(string pet1, string pet2, string pet3)
+            {
+                Console.WriteLine($"I'd like to bring {pet1}, {pet2}, & {pet3} on a trip to the park.");
+            }
+        }*/
+        private static void keyWords(){
+            Console.WriteLine(newsPaper("Big News!"));
+            static string newsPaper(string headline)
+            {
+                return $"This story is {headline}";
+            }
+        }
+
     }
 }
