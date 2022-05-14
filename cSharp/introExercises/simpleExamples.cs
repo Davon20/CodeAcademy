@@ -10,14 +10,15 @@ namespace cSharpFunctionality
         {
             //compOps();
             //booleanValues();
-            // variableTypes();
-            // convertInput();
-            // stringConcat();
-            // conditionalLogic();
+            //variableTypes();
+            //convertInput();
+            //stringConcat();
+            //conditionalLogic();
             //usingSwitch();
             //mysteryGame();
             //methodTypes();
-            keyWords();
+            //keyWords();
+            lambaExpression();
         }
 
         private static void compOps()
@@ -224,13 +225,30 @@ namespace cSharpFunctionality
                 Console.WriteLine($"I'd like to bring {pet1}, {pet2}, & {pet3} on a trip to the park.");
             }
         }*/
-        private static void keyWords(){
+        private static void keyWords()
+        {
             Console.WriteLine(newsPaper("Big News!"));
             static string newsPaper(string headline)
             {
                 return $"This story is {headline}";
             }
         }
+        private static void lambaExpression()
+        {
+            int[] nums = { 0, 555, 252, 3, 9, 101 };
 
+            bool hasBigNum = Array.Exists(nums, isBig);
+
+            bool hasSmallNum = Array.Exists(nums, isSmall);
+
+            bool hasMediumNum = Array.Exists(nums, (n) => n >= 10 && n <= 100);
+
+            Console.WriteLine($"Any big #s? {hasBigNum}");
+            Console.WriteLine($"Any small #s? {hasSmallNum}");
+            Console.WriteLine($"Any medium #s? {hasMediumNum}");
+            static bool isBig(int n) => n > 100;
+
+            static bool isSmall(int n) => n < 10;
+        }
     }
 }
