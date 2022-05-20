@@ -171,3 +171,102 @@ def multiListMethods():
 
     three_cheapest = pizza_and_prices[0:3]
     print(three_cheapest)
+    
+#Loops
+def looping():
+    car_models = ["Toyota", "Nissian", "Ford", "GMC", "Cheverlot", "Kia"]
+    for car in car_models: print(car)
+    #Looping according to a specific number of iterations requires the range()
+    for cars in range(3): print(car_models)
+
+def whileLoop():
+    #Elegant Loops in Python allows for the loops to be contained using a single line
+    countdown = 10
+    print("Starting Countdown")
+    while countdown >= 0: print(countdown); countdown -= 1
+    print("Green Light, Go! ")
+
+def whileListLoop():
+    car_models = ["Toyota", "Nissian", "Ford", "GMC", "Cheverlot", "Kia"]
+    car_list = len(car_models)
+    index = 0 
+    while index < car_list:
+        print(f"This is a {car_models[index]}")
+        index += 1
+
+def loopTypes():
+    car_models = ["Nissian", "Ford", "GMC", "Toyota", "Cheverlot", "Kia"]
+    car_I_want = "Toyota"
+    #Break
+    for cars in car_models:
+      print(cars)
+      if cars == car_I_want:
+        print("That's the car I want!")
+        break
+    #Continue
+    car_prices = [15, 19, 23, 27, 35, 42]
+    for price in car_prices:
+      if price <= 25:
+        continue
+      print(price)
+    #Nesting Loops
+    new_car_prices = [[5, 19], [23, 27], [35, 42]]
+    total_sales = 0
+    for i in new_car_prices: 
+        print(i)
+        for j in i: total_sales += j
+        
+    print(total_sales)
+
+def listComprehensions():
+    #Used to apply multiple changes to list elements in a single line of code 
+    old_car_prices = [15, 19, 23, 27, 35, 42]
+    inflation_price = [num + 7 for num in old_car_prices]
+    print(inflation_price)
+    
+    #Using Conditional Logic from Comprehensions
+    old_car_prices = [15, 19, 23, 27, 35, 42]
+    can_buy = []
+
+    for num in old_car_prices:
+      if num < 27: can_buy.append(num)
+    print(can_buy)
+    
+    #Lists Review Exercise
+    new_car_prices = [5, 19, 23, 27, 35, 42]
+    squared = []
+    for i in new_car_prices:
+      squared.append(i**2)
+      print(i)
+    print(squared)
+    cubed = [j**3 for j in new_car_prices]
+    print(cubed)
+    
+def monthlySales():
+    car_models = ["Toyota", "Nissian", "Ford", "GMC", "Cheverlot", "Kia"]
+    pricing = [30, 25, 40, 20, 20, 35]
+    total_price = 0
+    
+    for i in pricing: 
+        total_price += i
+        print(total_price)
+        
+    len(pricing)
+    average_price = total_price/len(pricing)
+    print("Average Dealer Price: " + str(average_price))
+    
+    discount_price = [num - 10 for num in pricing]
+    print(discount_price)
+    
+    total_sales = 0
+    last_week_sales = [7, 4, 2, 5, 3, 1]
+    for i in range(len(car_models)):
+      total_sales += pricing[i] * last_week_sales[i]
+    print("Total Revenue: " + str(total_sales))
+
+    avgday = total_sales/7
+    print(avgday)
+
+    cars_under_18 = [car_models[i] for i in
+    range(len(car_models)) if discount_price[i] < 18] 
+    print(cars_under_18)
