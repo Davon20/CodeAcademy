@@ -1,3 +1,3 @@
-trip_planner("France", "Germany", "Denmark")
-# trip_planner("Denmark", "France", "Germany")
-# trip_planner("Iceland", "Germany", "India")
+  # print(tenth_power(0))
+  # print(tenth_power(1))
+  # print(tenth_power(2))
