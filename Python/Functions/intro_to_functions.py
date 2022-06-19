@@ -239,5 +239,4 @@ def functionsChallenge():
   def win_percentage(wins, losses):
     percent = wins / (wins + losses) * 100
     return percent
-  # print(win_percentage(5, 5))
-functionsChallenge()
+  # print(win_percentage(5, 5)) 
