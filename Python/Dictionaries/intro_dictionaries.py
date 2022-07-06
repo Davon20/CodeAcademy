@@ -27,3 +27,16 @@ caffeine = [64, 40, 0, 120]
 zipped_drinks = zip(drinks, caffeine)
 drinks_to_caffeine = {key:value for key, value in zip(drinks, caffeine)}
 print(drinks_to_caffeine)
+
+#Testing Dict Application
+songs = ["Like a Rolling Stone", "Satisfaction", "Imagine", "What's Going On", "Respect", "Good Vibrations"]
+playcounts = [78, 29, 44, 21, 89, 5]
+#Creates the key: value pairs of the lists above for music
+plays = {key:value for key, value in zip(songs, playcounts)}
+#Adds a new song and play count
+plays["Purple Haze"] = 1
+#Updates existing song and plays
+plays.update({"Respect": 94})
+#Creates a category of the music and an empty list 
+library = {"The Best Songs": plays, "Sunday Feelings": {}}
+print(library)
