@@ -6,28 +6,28 @@ def listIntro():
     example_list = [1, 2, 3, 4]
     example_list.append(5)
     example_list.remove(5)
-# #Concatenating Lists using +
+#Concatenating Lists using +
     orders = ["daisy", "buttercup", "snapdragon", "gardenia", "lily"]
     new_orders = ["lilac", "iris"]
     broken_prices = [5, 3, 4, 5, 4] + [4]
     print(broken_prices)
     print(orders + new_orders)
-# Assigns variable for the list elements
+#Assigns variable for the list elements
     employees = ["Michael", "Dwight", "Jim", "Pam", "Ryan", "Andy", "Robert"]
     employee_four = employees[3]
     print(employee_four)
-# #Uses negative index values
+#Uses negative index values
     shopping_list = ["eggs", "butter", "milk", "cucumbers", "juice", "cereal"]
     last_element = shopping_list[-1]
     index5_element = shopping_list[5]
-# #Modifying List Elements
+#Modifying List Elements
     garden_waitlist = ["Jiho", "Adam", "Sonny", "Alisha"]
     garden_waitlist[-3] = "Calla"
-# #Shrinking A List
+#Shrinking A List
     order_list = ["Celery", "Orange Juice", "Orange", "Flatbread"]
 #Removing Element from List
     order_list.remove("Flatbread")
-# #Removing the spare Mango
+#Removing the spare Mango
     new_store_order_list = ["Orange", "Apple", "Mango", "Broccoli", "Mango"]
     print(new_store_order_list)
     new_store_order_list.remove("Mango")
@@ -36,7 +36,7 @@ def listIntro():
     new_store_order_list.remove("Onions")
     print(new_store_order_list)
 
-# 2D Lists: Lists Inside of Lists
+#2D Lists: Lists Inside of Lists
 def two_d_lists():
     heights = [["Jenny", 61], ["Alexus", 70], ["Sam", 67], ["Grace", 64], ["Vik", 68]]
     ages = [["Aaron", 15], ["Dhruti", 16]]
@@ -54,7 +54,7 @@ def two_d_lists():
       ["Madison", "Indian",	7]
     ]
     incoming_class[2][2] = 8
-# #Modifying Using Negative Indices
+#Modifying Using Negative Indices
     incoming_class[-3][-3] = "Ken"
     print(incoming_class)
 #Collective List Example
@@ -78,7 +78,7 @@ def two_d_lists():
       ]
     print(customer_data_final)
     
-# #Gradebook Exammple
+#Gradebook Exammple
 def masterList():
     last_semester_gradebook = [["politics", 80], ["latin", 96], ["dance", 97], ["architecture", 65]]
     subjects = "physics", "calculus", "poetry", "history"
