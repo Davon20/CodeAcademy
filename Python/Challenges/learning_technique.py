@@ -1,4 +1,5 @@
 from email.policy import EmailPolicy
+from tkinter.tix import DirSelectBox
 
 
 def strings_challenges():
@@ -125,8 +126,8 @@ def dict_challenge():
           #Only have the variables backwards
         numsum += value
       return numsum
-    print(sum_values({"milk":5, "eggs":2, "flour": 3}))    
-    print(sum_values({10:1, 100:2, 1000:3}))
+    # print(sum_values({"milk":5, "eggs":2, "flour": 3}))    
+    # print(sum_values({10:1, 100:2, 1000:3}))
     
     def sum_even_keys(my_dictionary):
         evensum = 0
@@ -137,18 +138,18 @@ def dict_challenge():
                 evensum += my_dictionary[key]
         return evensum
     #prints 2
-    print(sum_even_keys({1:5, 2:2, 3:3}))
+    # print(sum_even_keys({1:5, 2:2, 3:3}))
     #prints 6
-    print(sum_even_keys({10:1, 100:2, 1000:3}))
+    # print(sum_even_keys({10:1, 100:2, 1000:3}))
 
     def add_ten(my_dictionary):
       for key in my_dictionary.keys():
         my_dictionary[key] += 10
       return my_dictionary
     # should print {1:15, 2:12, 3:13}
-    print(add_ten({1:5, 2:2, 3:3}))
+    # print(add_ten({1:5, 2:2, 3:3}))
     # should print {10:11, 100:12, 1000:13}
-    print(add_ten({10:1, 100:2, 1000:3}))
+    # print(add_ten({10:1, 100:2, 1000:3}))
     
     def values_that_are_keys(my_dictionary):
       value_keys = []
@@ -157,9 +158,9 @@ def dict_challenge():
           value_keys.append(value)
       return value_keys
     # should print [1, 4]
-    print(values_that_are_keys({1:100, 2:1, 3:4, 4:10}))
+    # print(values_that_are_keys({1:100, 2:1, 3:4, 4:10}))
     # should print ["a"]
-    print(values_that_are_keys({"a":"apple", "b":"a", "c":100}))
+    # print(values_that_are_keys({"a":"apple", "b":"a", "c":100}))
     
     def max_key(my_dictionary):
       largest_key = float("-inf")
@@ -170,9 +171,9 @@ def dict_challenge():
           largest_key = key
       return largest_key
     # should print 1
-    print(max_key({1:100, 2:1, 3:4, 4:10}))
+    # print(max_key({1:100, 2:1, 3:4, 4:10}))
     # should print "c"
-    print(max_key({"a":100, "b":10, "c":1000}))
+    # print(max_key({"a":100, "b":10, "c":1000}))
 dict_challenge()
 
 def advanced_dict_challenge():
@@ -182,9 +183,9 @@ def advanced_dict_challenge():
         empty[word] = len(word)
       return empty
     # should print {"apple":5, "dog": 3, "cat":3}
-    print(word_length_dictionary(["apple", "dog", "cat"]))
+    # print(word_length_dictionary(["apple", "dog", "cat"]))
     # should print {"a": 1, "": 0}
-    print(word_length_dictionary(["a", ""]))
+    # print(word_length_dictionary(["a", ""]))
     
     #I don't fully grasp this method. I understand that it's counting the words in dictionary, but how?
     def frequency_dictionary(words):
@@ -200,9 +201,9 @@ def advanced_dict_challenge():
         emp_dict[word] += 1
       return emp_dict
     # should print {"apple":2, "cat":1, 1:1}
-    print(frequency_dictionary(["apple", "apple", "cat", 1]))
+    # print(frequency_dictionary(["apple", "apple", "cat", 1]))
     # should print {0:5}
-    print(frequency_dictionary([0,0,0,0,0]))
+    # print(frequency_dictionary([0,0,0,0,0]))
     
     #The first challenge I SOLVED ON MY OWN. :)
     def unique_values(my_dictionary):
@@ -213,9 +214,9 @@ def advanced_dict_challenge():
           empty_list.append(value)
       return len(empty_list)
     # should print 2
-    print(unique_values({0:3, 1:1, 4:1, 5:3}))
+    # print(unique_values({0:3, 1:1, 4:1, 5:3}))
     # should print 1
-    print(unique_values({0:3, 1:3, 4:3, 5:3}))
+    # print(unique_values({0:3, 1:3, 4:3, 5:3}))
     
     #This challenge was the last and hardest.
     def count_first_letter(names):
@@ -231,6 +232,145 @@ def advanced_dict_challenge():
         letters[first_letter] += len(names[key])
       return letters
     # should print {"S": 4, "L": 3}
-    print(count_first_letter({"Stark": ["Ned", "Robb", "Sansa"], "Snow" : ["Jon"], "Lannister": ["Jaime", "Cersei", "Tywin"]}))
+    # print(count_first_letter({"Stark": ["Ned", "Robb", "Sansa"], "Snow" : ["Jon"], "Lannister": ["Jaime", "Cersei", "Tywin"]}))
     # should print {"S": 7}
-    print(count_first_letter({"Stark": ["Ned", "Robb", "Sansa"], "Snow" : ["Jon"], "Sannister": ["Jaime", "Cersei", "Tywin"]}))
+    # print(count_first_letter({"Stark": ["Ned", "Robb", "Sansa"], "Snow" : ["Jon"], "Sannister": ["Jaime", "Cersei", "Tywin"]}))
+    
+def class_challenges():
+  #class is being defined
+  class DriveBot:
+    #constructor of/for class is being defined
+    def __init__(self):
+      #initializing three instance variables of the constructor
+      self.motor_speed = 0
+      self.direction = 0
+      self.sensor_range = 0
+      print(self.motor_speed)
+  #creates an object of the class
+  robot_1 = DriveBot()
+  #the ojbect's instance variables are changed by accessing the object through the variables
+  robot_1.motor_speed = 5
+  robot_1.direction = 90
+  robot_1.sensor_range = 10
+  #object variables can be assessed outside the object where constructor variables can only be accessed inside the constructor
+  print(robot_1.direction)
+  print(robot_1.sensor_range)
+  
+  class DriveBot:
+    def __init__(self):
+      self.motor_speed = 0
+      self.direction = 0
+      self.sensor_range = 0
+      #added 2 new methods that adjust speed, direction, & range. constructors always take self as a parameter
+    def control_bot(self, new_speed, new_direction):
+      self.motor_speed = new_speed
+      self.direction = new_direction
+
+    def adjust_sensor(self,new_sensor_range): 
+      self.sensor_range = new_sensor_range
+
+    robot_1 = DriveBot()
+    #updated values for instance variables
+    robot_1.motor_speed = 10
+    robot_1.direction = 180
+    robot_1.sensor_range = 20
+
+    print(robot_1.motor_speed)
+    print(robot_1.direction)
+    print(robot_1.sensor_range)
+    
+  class DriveBot:
+    #positional arguments are parameters that have default values defined as the parameter is being passed
+    def __init__(self, motor_speed = 0, direction = 180, sensor_range = 10):
+      self.motor_speed = motor_speed
+      self.direction = direction
+      self.sensor_range = sensor_range
+
+    def control_bot(self, new_speed, new_direction):
+      self.motor_speed = new_speed
+      self.direction = new_direction
+    def adjust_sensor(self, new_sensor_range):
+      self.sensor_range = new_sensor_range
+    robot_1 = DriveBot()
+    robot_1.motor_speed = 5
+    robot_1.direction = 90
+    robot_1.sensor_range = 10
+
+    #I created the 2nd robot, but motor_speed isn't initialized correctly? 
+    #I see, the constructor of the class when initialized should be to the positional arguments since those parameters contain values and not the values themselves.
+    robot_2 = DriveBot()
+    robot_2.motor_speed = 35
+    robot_2.direction = 75
+    robot_2.sensor_range = 25
+
+    print(robot_2.motor_speed)
+    print(robot_2.direction)
+    print(robot_2.sensor_range)
+    
+  class DriveBot:
+    #these class variables give every robot new features
+    all_disabled = False
+    latitude = -999999
+    longitude = -999999
+    
+    def __init__(self, motor_speed = 0, direction = 180, sensor_range = 10):
+        self.motor_speed = motor_speed
+        self.direction = direction
+        self.sensor_range = sensor_range
+
+    def control_bot(self, new_speed, new_direction):
+        self.motor_speed = new_speed
+        self.direction = new_direction
+    def adjust_sensor(self, new_sensor_range):
+        self.sensor_range = new_sensor_range
+    
+    robot_1 = DriveBot()
+    robot_1.motor_speed = 5
+    robot_1.direction = 90
+    robot_1.sensor_range = 10
+    robot_2 = DriveBot(35, 75, 25)
+    robot_3 = DriveBot(20, 60, 10)
+    #Changes the features of all robots at once
+    DriveBot.longitude = -79.98553
+    DriveBot.latitude = 40.60793
+    DriveBot.all_disabled = False
+    
+    print(robot_1.latitude)
+    print(robot_2.longitude)
+    print(robot_3.all_disabled)
+
+  class DriveBot:
+  # Create a counter to keep track of how many robots were created
+    all_disabled = False
+    latitude = -999999
+    longitude = -999999
+    robot_count = 0 
+
+    def __init__(self, motor_speed = 0, direction = 180, sensor_range = 10):
+        self.motor_speed = motor_speed
+        self.direction = direction
+        self.sensor_range = sensor_range
+        #I was caught on how to write robot_count
+        DriveBot.robot_count += 1
+        ##Don't really understand what self.id does or rather how id as variable is able to reach across each class
+        self.id = DriveBot.robot_count
+    
+    def control_bot(self, new_speed, new_direction):
+        self.motor_speed = new_speed
+        self.direction = new_direction
+
+    def adjust_sensor(self, new_sensor_range):
+        self.sensor_range = new_sensor_range
+
+  robot_1 = DriveBot()
+  robot_1.motor_speed = 5
+  robot_1.direction = 90
+  robot_1.sensor_range = 10
+
+  robot_2 = DriveBot(35, 75, 25)
+  robot_3 = DriveBot(20, 60, 10)
+
+  print(robot_1.id)
+  print(robot_2.id)
+  print(robot_3.id)
+class_challenges()
